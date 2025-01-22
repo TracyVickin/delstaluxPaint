@@ -1,0 +1,158 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #F8F9F9;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Head1 Styles */
+.head1 {
+  background-color: #F8F9F9;
+  display: flex;
+  justify-content: center;
+  padding: 5px 20px;
+}
+
+.contact {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+/* Head2 Styles */
+.head2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #007BFF;
+}
+
+/* Main Sections */
+main {
+  margin-top: 120px; /* Adjust for fixed header */
+  padding: 20px;
+  height: 150vh;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .head1 {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .head2 {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+}
+
+
+
+
+.note{
+  /* display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; */
+  width: 60%;
+  background-color: #33C1FF;
+  /* margin-left: 20%; */
+  height: 62vh;
+  border-radius: 10px;
+
+  
+}
+.note > h2{
+  color: black ;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  padding-top: 0.2rem;
+}
+.note > p{
+  
+  text-align: center;
+  margin-top: 8px;
+  line-height: 1.8rem;
+  padding: 10px;
+}
+.note > button{
+  background-color: #FFC300;
+  margin-left: 40%;
+  padding: 1% 2%;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.about-us{
+  border: 3px solid red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-section{
+  border: 2px solid green;
+  height: 100%;
+}
+.flex-line{
+  display: flex;
+}
