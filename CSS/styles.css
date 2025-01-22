@@ -22,19 +22,19 @@ header {
 .head1 {
   background-color: #F8F9F9;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   padding: 5px 20px;
 }
 
 .contact {
   display: flex;
-  gap: 20px;
+  /* gap: 10px; */
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 5px;
+  /* gap: 5px; */
   font-size: 14px;
 }
 
@@ -46,6 +46,7 @@ header {
   background-color: #fff;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 10vh;
 }
 
 .logo {
@@ -71,10 +72,86 @@ header {
   color: #007BFF;
 }
 
+/* From Uiverse.io by faxriddin20 */ 
+.card {
+  width: 250px;
+  height: 20px;
+  /* background-color: rgb(238, 238, 238); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 10px 10px; */
+  gap: 20px;
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055); */
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: green;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 15px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 /* Main Sections */
 main {
-  margin-top: 120px; /* Adjust for fixed header */
-  padding: 20px;
+  margin-top: 85px; /* Adjust for fixed header */
+  /* padding: 20px; */
   height: 150vh;
 }
 
@@ -150,9 +227,76 @@ section {
 }
 
 .main-section{
-  border: 2px solid green;
-  height: 100%;
+  /* border: 2px solid green; */
+  /* height: 100%; */
 }
 .flex-line{
   display: flex;
+}
+
+/* Main Section */
+.main-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  z-index: 1;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
 }
