@@ -105,16 +105,15 @@ section {
 
 
 .note{
-  /* display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center; */
   width: 60%;
   background-color: #33C1FF;
-  /* margin-left: 20%; */
-  height: 62vh;
+  min-height: 60vh;
   border-radius: 10px;
-
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   
 }
 .note > h2{
@@ -128,20 +127,26 @@ section {
   
   text-align: center;
   margin-top: 8px;
-  line-height: 1.8rem;
+  line-height: 2rem;
   padding: 10px;
+  font-size: 1.3rem;
 }
-.note > button{
+.note > a{
   background-color: #FFC300;
-  margin-left: 40%;
-  padding: 1% 2%;
-  border: none;
-  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  border-radius: 7px;
   font-weight: 700;
+  margin-top: 2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
+
 .about-us{
-  border: 3px solid red;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -150,9 +155,26 @@ section {
 }
 
 .main-section{
-  border: 2px solid green;
   height: 100%;
 }
 .flex-line{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7rem;
+  margin-bottom: 4rem;
+}
+.flex-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-1 > p{
+  font-size: 1rem;
+}
+.flex-1 > h1{
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
 }
