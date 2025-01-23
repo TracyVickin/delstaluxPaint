@@ -22,19 +22,19 @@ header {
 .head1 {
   background-color: #F8F9F9;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   padding: 5px 20px;
 }
 
 .contact {
   display: flex;
-  gap: 20px;
+  /* gap: 10px; */
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 5px;
+  /* gap: 5px; */
   font-size: 14px;
 }
 
@@ -46,6 +46,7 @@ header {
   background-color: #fff;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 10vh;
 }
 
 .logo {
@@ -71,10 +72,86 @@ header {
   color: #007BFF;
 }
 
+/* From Uiverse.io by faxriddin20 */ 
+.card {
+  width: 250px;
+  height: 20px;
+  /* background-color: rgb(238, 238, 238); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 18px;
+  gap: 20px;
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055); */
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: green;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 15px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 /* Main Sections */
 main {
-  margin-top: 120px; /* Adjust for fixed header */
-  padding: 20px;
+  margin-top: 85px; /* Adjust for fixed header */
+  /* padding: 20px; */
   height: 150vh;
 }
 
@@ -154,8 +231,76 @@ section {
   justify-content: space-between;
 }
 
-.main-section{
+
+.flex-line{
+  display: flex;
+}
+
+/* Main Section */
+.main-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  z-index: 1;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
 }
 .flex-line{
   display: flex;
@@ -178,3 +323,200 @@ section {
   font-weight: 900;
   text-align: center;
 }
+
+/* services section styling */
+.services{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  background-color:#33C1FF ;
+  min-height: 80vh;
+  /* border: 2px solid green; */
+}
+.services-text{
+  width: 35%;
+  margin-left: 140px;
+  /* border: 2px solid green; */
+}
+.services-box {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+   /* Allow wrapping of boxes on smaller screens */
+}
+
+.service-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Space between boxes when they wrap */
+}
+
+.icon {
+  font-size: 40px; /* Adjust for your icon size */
+  margin-bottom: 15px;
+}
+
+.service-info {
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1em;
+  /* color: #666; */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 1024px (tablets, smaller laptops) */
+@media (max-width: 1024px) {
+  .service-box {
+      width: 45%; /* Two boxes per row */
+  }
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 768px) {
+  .service-box {
+      width: 100%; /* One box per row */
+  }
+  .services-box {
+      flex-direction: column; /* Stack the boxes vertically */
+  }
+  .service-box {
+      margin-bottom: 15px; /* Adjust space between stacked boxes */
+  }
+}
+
+/* work section styling */
+/* Section Styling */
+.work {
+  background:  #fa8100;
+  /* padding: 50px 20px; */
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  /* border: 4px solid red; */
+  padding-left: 100px;
+  margin-top: -100px;
+}
+
+/* Intro Section */
+.work-intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 700px;
+  height: 60vh;
+  /* border: 2px solid aqua; */
+  /* margin: 0 auto; */
+  text-align: left;
+  padding-left: 30px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1; /* Ensures it's behind the service boxes */
+}
+
+.work-intro h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+  width: 40%;
+}
+
+.work-intro p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+  width: 50%;
+}
+
+/* Service Boxes */
+.work-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensures the boxes are on top */
+}
+
+.work-box {
+  background-color: #33C1FF;
+  border-radius: 10px;
+  padding: 20px;
+  width: 225px;
+  height: 45vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* text-align: center; */
+  position: relative;
+}
+.work-num{
+  background-color: coral;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-box h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.work-box p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .work-boxes {
+      flex-direction: column;
+      align-items: center;
+      top: 60%; /* Adjust to better fit smaller screens */
+  }
+
+  .work-box {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-intro {
+      padding: 20px;
+  }
+
+  .work-box {
+      width: 90%;
+  }
+}
+
+
