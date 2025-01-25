@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/styles.css">
+    
 </head>
 <body>
     <header>
@@ -72,7 +73,9 @@
         </div>
       </section>
       
-        <section class="about-us">
+      <section class="about-us">
+        <div class="about-body">
+           <img src="./ASSETS/IMAGES/pexels-blue-bird-7218525.jpg"/>
             <div class="note">
               <h2>Who we are?</h2>
                 <p>Welcome to Delstalux Paints, where colors come to   life!
@@ -87,38 +90,39 @@
                 </p>
                 <a href="./services.html">Learn More</a>
             </div>
+          </div>
 
-
-            <div class="flex-line">
-              <div class="flex-1">
-                  <img src="./ASSETS/ICONS/smiley.svg"/>
-                  <h1>1500+</h1>
-                  <p>Happy Clients</p>
-              </div>
-
-              <div class="flex-1">
-                <img src="./ASSETS/ICONS/bag.svg"/>
-                <h1>1000</h1>
-                <p>Outstanding Services</p>
+          <div class="flex-line">
+            <div class="flex-1">
+              <img src="./ASSETS/ICONS/smiley.svg" />
+              <h1 class="counter" data-target="1500">0</h1>
+              <p>Happy Clients</p>
             </div>
-
+          
             <div class="flex-1">
-              <img src="./ASSETS/ICONS/person.svg"/>
-              <h1>1500</h1>
+              <img src="./ASSETS/ICONS/bag.svg" />
+              <h1 class="counter" data-target="1000">0</h1>
+              <p>Outstanding Services</p>
+            </div>
+          
+            <div class="flex-1">
+              <img src="./ASSETS/ICONS/person.svg" />
+              <h1 class="counter" data-target="1500">0</h1>
               <p>Professional Finish</p>
-          </div>
+            </div>
+          
             <div class="flex-1">
-              <img src="./ASSETS/ICONS/people.svg"/>
-              <h1>1400+</h1>
+              <img src="./ASSETS/ICONS/people.svg" />
+              <h1 class="counter" data-target="1400">0</h1>
               <p>Returning Clients</p>
+            </div>
           </div>
-
-              
+          
 
           </div>
-        </section>
+       </section>
 
-        <section class="services">
+       <section class="services">
           <div class="services-text">
             <h3>Our Services</h3>
             <p>We proud ourselves in delivering topnotch paints/painting and interior decor services tailored to meet your unique needs. Our team of skilled professionals is dedicated to transforming your space with precision and care ensuring exceptional results everytime.</p>
@@ -180,8 +184,48 @@
               </div>
           </div>
       </section>
+      <section class="our-portfolio">
+        <h1>Our Portfolio</h1>
+        <p>Our portfolio is a testament to our dedication, creativity, and ability to deliver results. We invite you to see<br>our works and how we can bring value to your projects/homes.</p>
       
+        <div class="buttons">
+            <button onclick="showGallery('interior-painting')">Interior Painting</button>
+            <button onclick="showGallery('exterior-painting')">Exterior Painting</button>
+            <button onclick="showGallery('interior-decorations')">Interior Decorations</button>
+        </div>
+    
+        <div id="interior-painting" class="gallery">
+            <img src="./ASSETS/IMAGES/alexandra-gorn-JIUjvqe2ZHg-unsplash.jpg" alt="Interior Painting 1">
+            <img src="./ASSETS/IMAGES/pexels-pixabay-259962.jpg" alt="Interior Painting 2">
+            <img src="./ASSETS/IMAGES/pexels-fotoaibe-1669799.jpg" alt="Interior Painting 3">
+            <img src="./ASSETS/IMAGES/alexandra-gorn-JIUjvqe2ZHg-unsplash.jpg" alt="Interior Painting 1">
+            <img src="./ASSETS/IMAGES/pexels-pixabay-259962.jpg" alt="Interior Painting 2">
+            <img src="./ASSETS/IMAGES/pexels-fotoaibe-1669799.jpg" alt="Interior Painting 3">
+        </div>
+    
+        <div id="exterior-painting" class="gallery">
+          <img src="./ASSETS/IMAGES/alexandra-gorn-JIUjvqe2ZHg-unsplash.jpg" alt="Interior Painting 1">
+          <img src="./ASSETS/IMAGES/pexels-pixabay-259962.jpg" alt="Interior Painting 2">
+          <img src="./ASSETS/IMAGES/pexels-fotoaibe-1669799.jpg" alt="Interior Painting 3">
+          <img src="./ASSETS/IMAGES/alexandra-gorn-JIUjvqe2ZHg-unsplash.jpg" alt="Interior Painting 1">
+          <img src="./ASSETS/IMAGES/pexels-pixabay-259962.jpg" alt="Interior Painting 2">
+          <img src="./ASSETS/IMAGES/pexels-fotoaibe-1669799.jpg" alt="Interior Painting 3">
+        </div>
+    
+        <div id="interior-decorations" class="gallery">
+          <img src="./ASSETS/IMAGES/alexandra-gorn-JIUjvqe2ZHg-unsplash.jpg" alt="Interior Painting 1">
+          <img src="./ASSETS/IMAGES/pexels-pixabay-259962.jpg" alt="Interior Painting 2">
+          <img src="./ASSETS/IMAGES/pexels-fotoaibe-1669799.jpg" alt="Interior Painting 3">
+          <img src="./ASSETS/IMAGES/alexandra-gorn-JIUjvqe2ZHg-unsplash.jpg" alt="Interior Painting 1">
+          <img src="./ASSETS/IMAGES/pexels-pixabay-259962.jpg" alt="Interior Painting 2">
+          <img src="./ASSETS/IMAGES/pexels-fotoaibe-1669799.jpg" alt="Interior Painting 3">
+
+            
+        </div>
+    </section>
+    
     </main>
     <footer></footer>
+    <script src="./script.js"></script>
 </body>
 </html>
