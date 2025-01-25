@@ -156,7 +156,7 @@ main {
 }
 
 section {
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 /* Responsive Styles */
@@ -182,59 +182,86 @@ section {
 
 
 .note{
-  width: 60%;
+  width: 45%;
   background-color: #33C1FF;
-  min-height: 60vh;
+  min-height: 55vh;
   border-radius: 10px;
   margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  position: absolute;
+  /* line-height: 1.5rem; */
+  right: 70px;
+  top: 70px;
 }
 .note > h2{
   color: black ;
   text-align: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-size: 2rem;
   padding-top: 0.2rem;
 }
 .note > p{
-  
   text-align: center;
-  margin-top: 8px;
-  line-height: 2rem;
   padding: 10px;
   font-size: 1.3rem;
 }
-.note > a{
+.note > a {
   background-color: #FFC300;
-  width: 200px;
-  height: 50px;
   border-radius: 7px;
   font-weight: 700;
-  margin-top: 2rem;
   text-decoration: none;
-  display: flex;
-  align-items: center ;
-  justify-content: center;
-  margin-bottom: 3rem;
+  padding: 10px 20px; /* Spacing inside the button */
+  text-align: center; /* Align the text inside the button */
+  display: inline-block; /* Keeps it inline and block-like */
 }
 
-
-.about-us{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
+  .about-us{
+      height: 100vh;
+      background-color: #FFC300;
+  }
+  .about-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .about-body > img{
+    width: 60%;
+    height: 70vh;
+    padding: 20px 30px;
+  }
 
 .flex-line{
-  display: flex;
+  display: flex; 
+  justify-content: space-around;
+  align-items: center; 
+  gap: 7rem; 
+  margin-top: 1rem;
 }
+.flex-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-1 > p{
+  font-size: 1rem;
+} 
+.flex-1 > h1{
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+} 
+.counter {
+  font-size: 2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+
 
 /* Main Section */
 .main-section {
@@ -301,27 +328,6 @@ section {
   .content p {
     font-size: 1rem;
   }
-}
-.flex-line{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 7rem;
-  margin-bottom: 4rem;
-}
-.flex-1{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.flex-1 > p{
-  font-size: 1rem;
-}
-.flex-1 > h1{
-  font-size: 5rem;
-  font-weight: 900;
-  text-align: center;
 }
 
 /* services section styling */
@@ -404,7 +410,7 @@ p {
 /* work section styling */
 /* Section Styling */
 .work {
-  background:  #fa8100;
+  background:  #FFC300;
   /* padding: 50px 20px; */
   position: relative;
   overflow: hidden;
@@ -473,7 +479,7 @@ p {
   position: relative;
 }
 .work-num{
-  background-color: coral;
+  background-color: #FFC300;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -519,4 +525,59 @@ p {
   }
 }
 
+/* our-portfolio*/
+.our-portfolio > h1{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  padding-top: 1rem;
+}
+.our-portfolio > p{
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
 
+.our-portfolio{
+  height: 100vh;
+  background-color:#33C1FF;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+  
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #33C1FF;
+  border-radius: 5px;
+  background-color: #FFC300;
+  transition: background-color 0.3s;
+}
+
+/* .buttons button:hover {
+  background-color:#33C1FF;
+} */
+
+.gallery {
+  display: none;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 10px;
+  padding: 0px 50px;
+}
+
+.gallery img {
+  width: 95%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery.active {
+  display: grid;
+}
