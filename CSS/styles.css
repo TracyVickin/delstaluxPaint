@@ -589,3 +589,82 @@ p {
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* client review */
+.review-section {
+  padding: 2rem;
+  background-color:#FFC300;
+  text-align: center;
+}
+
+.review-section .heading h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+
+}
+
+/* Slider Container */
+.slide-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  cursor: grab;
+}
+
+.reviews-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.reviews {
+  flex: 0 0 100%;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #33C1FF;
+  border-radius: 8px;
+  text-align: center;
+  height: 30vh;
+  line-height: 2.5rem;
+  width: 50%;
+}
+
+
+.reviews > p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.reviews > h2 {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #666;
+}
+.reviews > h3 {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: grey;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dots .dot{
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color:#33C1FF;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dots .dot.active {
+  background-color: #ff6600;
+}
