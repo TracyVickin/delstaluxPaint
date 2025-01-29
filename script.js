@@ -1,20 +1,34 @@
 // Function to show the gallery corresponding to the clicked button
-function showGallery(galleryId) {
-    // Hide all galleries by removing the 'active' class
-    const galleries = document.querySelectorAll('.gallery');
-    galleries.forEach((gallery) => gallery.classList.remove('active'));
+document.addEventListener("DOMContentLoaded", function () {
+    // Hide all galleries except the first one
+    document.querySelectorAll(".gallery").forEach(gallery => {
+        gallery.style.display = "none";
+    });
 
-    // Show the selected gallery by adding the 'active' class
-    const selectedGallery = document.getElementById(galleryId);
-    if (selectedGallery) {
-        selectedGallery.classList.add('active');
+    // Show the first gallery by default (Interior Painting)
+    const defaultGallery = document.getElementById("interior-painting");
+    if (defaultGallery) {
+        defaultGallery.style.display = "grid";
+        defaultGallery.classList.add("interior-painting");
+    }
+});
+
+// Make the function globally accessible
+function showGallery(galleryId) {
+    // Hide all galleries
+    document.querySelectorAll(".gallery").forEach(gallery => {
+        gallery.style.display = "none";
+        gallery.classList.remove("interior-painting", "exterior-painting", "interior-decorations");
+    });
+
+    // Show the selected gallery and apply the grid style
+    const activeGallery = document.getElementById(galleryId);
+    if (activeGallery) {
+        activeGallery.style.display = "grid";
+        activeGallery.classList.add(galleryId);
     }
 }
 
-// Ensure the 'interior-painting' gallery is shown by default when the page loads
-window.onload = function() {
-    showGallery('interior-painting');
-}
 
 
   // Counter animation functionality
