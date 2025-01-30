@@ -11,22 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
         defaultGallery.classList.add("interior-painting");
     }
 
-    // Function to show the gallery corresponding to the clicked button
-    function showGallery(galleryId) {
-        // Hide all galleries
-        document.querySelectorAll(".gallery").forEach(gallery => {
-            gallery.style.display = "none";
-            gallery.classList.remove("interior-painting", "exterior-painting", "interior-decorations");
-        });
-
-        // Show the selected gallery and apply the grid style
-        const activeGallery = document.getElementById(galleryId);
-        if (activeGallery) {
-            activeGallery.style.display = "grid";
-            activeGallery.classList.add(galleryId);
-        }
-    }
-
     // Counter animation functionality
     const counters = document.querySelectorAll(".counter");
     const aboutUsSection = document.querySelector(".about-us");
@@ -69,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (aboutUsSection) {
         observer.observe(aboutUsSection); // Observe the "about-us" section
     }
-  
+
     // Client Review Section Slider
     let currentIndex = 0;
     let isMouseDown = false;
@@ -77,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const slider = document.querySelector('.reviews-slider');
     const reviews = document.querySelectorAll('.reviews');
     const dots = document.querySelectorAll('.dots .dot');
-    const totalSlides = reviews.length;
+    const totalSlides = reviews.length;  // ✅ Fixed variable name (was "re" before)
 
     // Function to show a specific slide based on index
     function showSlide(index) {
@@ -137,3 +121,27 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial setup to show the first slide
     showSlide(currentIndex);
 });
+
+// ✅ Ensure function is globally accessible
+function showGallery(galleryId) {
+    // Hide all galleries
+    document.querySelectorAll(".gallery").forEach(gallery => {
+        gallery.style.display = "none";
+        gallery.classList.remove("interior-painting", "exterior-painting", "interior-decorations");
+    });
+
+    // Show the selected gallery and apply the correct grid style
+    const activeGallery = document.getElementById(galleryId);
+    if (activeGallery) {
+        activeGallery.style.display = "grid";
+
+        // Apply correct grid layout based on gallery ID
+        if (galleryId === "interior-painting") {
+            activeGallery.classList.add("interior-painting");
+        } else if (galleryId === "exterior-painting") {
+            activeGallery.classList.add("exterior-painting");
+        } else if (galleryId === "interior-decorations") {
+            activeGallery.classList.add("interior-decorations");
+        }
+    }
+}
