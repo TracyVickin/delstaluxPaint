@@ -192,7 +192,7 @@ section {
   justify-content: center; 
   align-items: center; 
   position: absolute;
-  /* line-height: 1.5rem; */
+  line-height: 1.8rem;
   right: 70px;
   top: 70px;
 }
