@@ -236,7 +236,7 @@ section {
 
 .flex-line{
   display: flex; 
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center; 
   gap: 7rem; 
   margin-top: 1rem;
@@ -668,3 +668,6 @@ p {
 .dots .dot.active {
   background-color: #ff6600;
 }
+
+
+   
